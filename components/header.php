@@ -12,11 +12,14 @@
                 <li class="nav-item">
                     <a class="nav-link fw-bold mx-4  <?php echo (basename($_SERVER['PHP_SELF']) == 'save.php') ? 'active' : ''; ?>" href="./save.php">Favorites</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold mx-4  <?php echo (basename($_SERVER['PHP_SELF']) == 'dashboard.php') ? 'active' : ''; ?>" href="./dashboard.php">Dashboard</a>
+                </li>
 
 
 
             </ul>
-            <form class="d-flex" onsubmit="handleSearch(event)">
+            <form class="d-flex <?php echo (basename($_SERVER['PHP_SELF']) == 'dashboard.php') ? 'd-none' : 'flex'; ?>" onsubmit="handleSearch(event)" >
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
